@@ -4,7 +4,7 @@ const btnClearEl = document.querySelector('[data-action="destroy"');
 const boxEl = document.querySelector('#boxes');
 
 btnCreateEl.addEventListener('click', createBoxes);
- 
+
 function createBoxes(amount) {
     amount = inputEl.value;
    
@@ -26,15 +26,16 @@ function createBoxes(amount) {
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     };
 
-    const box = boxEl.querySelectorAll('div')
-    btnClearEl.addEventListener('click', clearBoxes);
-    
-   
-function clearBoxes() {
-        console.log(box);
-        // box.remove()
-    // boxEl.removeChild(box);
-// box.removeChild()
-}
+    btnClearEl.addEventListener('click', destroyBoxes);
+
+    const boxes = boxEl.querySelectorAll('div');
+
+    function destroyBoxes() {
+        boxes.forEach(element => element.remove())
+    };
 };
 
+
+     
+       
+    
