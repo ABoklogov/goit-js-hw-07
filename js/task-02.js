@@ -8,10 +8,10 @@ const ingredients = [
 ];
 
 const ingredientsEl = document.querySelector('#ingredients');
+const newIngredients = document.createElement('ul');
 
 ingredients.forEach(element =>
-   ingredientsEl.appendChild(document.createElement('li')).textContent = element
+   newIngredients.appendChild(document.createElement('li')).textContent = element
 );
 
-
-
+ingredientsEl.replaceWith(newIngredients);

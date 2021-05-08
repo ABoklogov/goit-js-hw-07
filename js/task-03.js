@@ -17,18 +17,22 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('#gallery');
-
+const newGallery = document.createElement('ul');
+  
 images.forEach(element =>
-    galleryEl.insertAdjacentHTML('beforeend', `<li><img class="item" src="${element.url}" alt="${element.alt}" width=250></li>`)
+    newGallery.insertAdjacentHTML('beforeend', `<li><img class="item" src="${element.url}" alt="${element.alt}" width=250></li>`)
 );
+
+galleryEl.replaceWith(newGallery);
 
 const image = document.querySelectorAll('.item');
 const body = document.querySelector('body');
 
-galleryEl.style.display = 'flex';
-galleryEl.style.justifyContent = 'space-evenly';
-galleryEl.style.alignItems = 'center';
-galleryEl.style.listStyle = 'none';
+newGallery.style.display = 'flex';
+newGallery.style.justifyContent = 'space-evenly';
+newGallery.style.alignItems = 'center';
+newGallery.style.listStyle = 'none';
 body.style.backgroundColor = 'teal';
 image.forEach(el => el.border = '5px solid #212121');
+
 
