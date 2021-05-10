@@ -35,7 +35,7 @@ function createBoxes(amount) {
     btnClearEl.addEventListener('click', destroyBoxes);
 
     const boxes = boxEl.querySelectorAll('div');
-
+    
     function destroyBoxes() {
         boxes.forEach(element => element.remove())
         sizeBox = 20;
