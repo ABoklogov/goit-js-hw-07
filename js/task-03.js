@@ -22,7 +22,7 @@ const newGallery = images.map(element => {
   return `<li><img class="item" src="${element.url}" alt="${element.alt}" width=250></li>`
 });
 
-galleryEl.insertAdjacentHTML('beforeend', newGallery);
+galleryEl.insertAdjacentHTML('beforeend', newGallery.join(' '));
 
 const image = document.querySelectorAll('.item');
 const body = document.querySelector('body');
