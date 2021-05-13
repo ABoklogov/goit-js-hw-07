@@ -13,7 +13,7 @@ function createBoxes(amount) {
     boxEl.style.flexWrap = 'wrap';
     
     Array.from(Array(Number(amount)).keys())
-        .forEach(el => {
+        .forEach(() => {
             const box = document.createElement("div");
             const r = Math.floor(Math.random() * (256));
             const g = Math.floor(Math.random() * (256));
